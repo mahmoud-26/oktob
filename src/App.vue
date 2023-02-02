@@ -16,12 +16,12 @@ export default {
   data() {
     return {
       value: '',
-      show: false
+      show: true
     }
   },
   mounted() {
     if (localStorage.getItem("text") == null) {
-      localStorage.setItem("text", "# السلام عليكم")
+      localStorage.setItem("text", "# Hello")
       this.value = localStorage.getItem("text")
     } else {
       this.value = localStorage.getItem("text")
@@ -92,8 +92,9 @@ export default {
   }
   .output {
     width: 100%;
-    height: 100vh;
-    padding: 0.2em 1.5em;
+    height: auto;
+    padding: 0.2em 1.5em 1em 1.5em;
+    padding-bottom: 20px !important;
     position: absolute;
     top: 60px;
     left: 0;
