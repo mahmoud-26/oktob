@@ -11,7 +11,7 @@
       </div>
       <div class="toggle">
         <i class="fi fi-rr-eye" v-if="!show" @click="toggle"></i>
-        <i class="fi fi-rr-money-check-edit" v-if="show" @click="toggle"></i>
+        <i class="fi fi-rr-calendar-lines-pen" v-if="show" @click="toggle"></i>
       </div>
     </nav>
     <div class="editor">
