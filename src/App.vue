@@ -16,7 +16,7 @@
     </nav>
     <div class="editor">
       <textarea ref="textarea" dir="rtl" v-model="value" class="textarea" @input="update"></textarea>
-      <span dir="rtl" class="output" v-html="output" v-if="show"></span>
+      <div dir="rtl" class="output" v-html="output" v-if="show"></div>
     </div>
   </div>
 </template>
