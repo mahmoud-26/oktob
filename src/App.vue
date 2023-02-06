@@ -55,6 +55,7 @@ export default {
       const before = sentence.substr(0, pos)
       const after = sentence.substr(pos, len)
       this.value = before + "****" + after
+      localStorage.setItem("text", this.value)
     },
     i() {
       let textarea = this.$refs.textarea
@@ -64,6 +65,7 @@ export default {
       const before = sentence.substr(0, pos)
       const after = sentence.substr(pos, len)
       this.value = before + "__" + after
+      localStorage.setItem("text", this.value)
     },
     h() {
       let textarea = this.$refs.textarea
@@ -73,6 +75,7 @@ export default {
       const before = sentence.substr(0, pos)
       const after = sentence.substr(pos, len)
       this.value = before + "# " + after
+      localStorage.setItem("text", this.value)
     },
     g() {
       let textarea = this.$refs.textarea
@@ -82,6 +85,7 @@ export default {
       const before = sentence.substr(0, pos)
       const after = sentence.substr(pos, len)
       this.value = before + "![]()" + after
+      localStorage.setItem("text", this.value)
     }
   }
 }
@@ -110,7 +114,10 @@ export default {
     height: 60px;
     background: white;
     background: var(--blue);
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
   }
   .buttons {
     width: 80%;
@@ -134,7 +141,7 @@ export default {
   .textarea {
     width: 100%;
     height: 100vh;
-    padding: 1.2em 1.5em;
+    padding: 5em 1.5em 2em 1.5em !important;
     font-size: 1em;
     border: none;
     outline: none;
@@ -142,7 +149,7 @@ export default {
   .output {
     width: 100%;
     height: auto;
-    padding: 0.2em 1.5em 1em 1.5em;
+    padding: 0.25em 1.5em 1em 1.5em;
     padding-bottom: 20px !important;
     position: absolute;
     top: 60px;
@@ -165,5 +172,9 @@ export default {
     background: var(--black);
     padding: 0.5em;
     border-radius: 5px;
+  }
+  .output a {
+    text-decoration: none;
+    color: var(--blue);
   }
 </style>
