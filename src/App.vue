@@ -6,6 +6,9 @@
         <i class="fi fi-br-i" @click="i"></i>
         <i class="fi fi-br-h" @click="h"></i>
         <i class="fi fi-rr-picture" @click="g"></i>
+        <i class="fi fi-rr-quote-right" @click="q"></i>
+        <i class="fi fi-rr-code-simple" @click="c"></i>
+        <i class="fi fi-br-link-alt" @click="l"></i>
         <i class="fi fi-br-expand" @click="toggleFullscreen" v-if="!fullscreen"></i>
         <i class="fi fi-br-compress" @click="toggleFullscreen" v-if="fullscreen"></i>
       </div>
@@ -112,6 +115,36 @@ export default {
       const after = sentence.substr(pos, len)
       this.value = before + "![]()" + after
       localStorage.setItem("text", this.value)
+    },
+    q() {
+      let textarea = this.$refs.textarea
+      const sentence = textarea.value
+      const len = sentence.length
+      let pos = textarea.selectionStart
+      const before = sentence.substr(0, pos)
+      const after = sentence.substr(pos, len)
+      this.value = before + ">" + after
+      localStorage.setItem("text", this.value)
+    },
+    c() {
+      let textarea = this.$refs.textarea
+      const sentence = textarea.value
+      const len = sentence.length
+      let pos = textarea.selectionStart
+      const before = sentence.substr(0, pos)
+      const after = sentence.substr(pos, len)
+      this.value = before + "``````" + after
+      localStorage.setItem("text", this.value)
+    },
+    l() {
+      let textarea = this.$refs.textarea
+      const sentence = textarea.value
+      const len = sentence.length
+      let pos = textarea.selectionStart
+      const before = sentence.substr(0, pos)
+      const after = sentence.substr(pos, len)
+      this.value = before + "[]()" + after
+      localStorage.setItem("text", this.value)
     }
   }
 }
@@ -137,37 +170,48 @@ export default {
   }
   .navbar {
     width: 100%;
-    height: 60px;
+    height: 90px;
     background: white;
     background: var(--blue);
     position: fixed;
     top: 0;
     left: 0;
     z-index: 999;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
   }
   .buttons {
     width: 80%;
-    height: 60px;
-    padding-top: 6px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    height: 90px;
+    padding: 5px 15px 15px 15px;
+    text-align: center;
+    display: grid;
+    row-gap: 5px;
+    column-gap: 35px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
   }
   .buttons i {
-    font-size: 1em;
+    font-size: 0.85em;
     color: var(--white);
+    padding: 10px 0 6px 0;
+    border-radius: 5px;
+    transition: background 0.1s;
+  }
+  .buttons i:active {
+    background: #023E8A;
   }
   .toggle i {
     font-size: 1.2em;
     color: var(--white);
     position: absolute;
-    top: 19px;
+    top: 30px;
     right: 30px;
   }
   .textarea {
     width: 100%;
     height: 100vh;
-    padding: 5em 1.5em 2em 1.5em !important;
+    padding: 7em 1.5em 2em 1.5em !important;
     font-size: 1em;
     border: none;
     outline: none;
@@ -175,7 +219,7 @@ export default {
   .output {
     width: 100%;
     height: 100vh;
-    padding: 4em 1.5em 1em 1.5em;
+    padding: 6em 1.5em 1em 1.5em;
     position: absolute;
     top: 0;
     left: 0;
