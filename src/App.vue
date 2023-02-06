@@ -9,8 +9,11 @@
         <i class="fi fi-rr-quote-right" @click="q"></i>
         <i class="fi fi-rr-code-simple" @click="c"></i>
         <i class="fi fi-br-link-alt" @click="l"></i>
+        <i class="fi fi-br-list" @click="u"></i>
+        <!--
         <i class="fi fi-br-expand" @click="toggleFullscreen" v-if="!fullscreen"></i>
         <i class="fi fi-br-compress" @click="toggleFullscreen" v-if="fullscreen"></i>
+        -->
       </div>
       <div class="toggle">
         <i class="fi fi-rr-eye" v-if="!show" @click="toggle"></i>
@@ -55,6 +58,7 @@ export default {
     toggle() {
       this.show = !this.show
     },
+    /*
     toggleFullscreen() {
       this.fullscreen = !this.fullscreen
       let container = this.$refs.container
@@ -76,6 +80,7 @@ export default {
         }
       }
     },
+    */
     b() {
       let textarea = this.$refs.textarea
       const sentence = textarea.value
@@ -144,6 +149,16 @@ export default {
       const before = sentence.substr(0, pos)
       const after = sentence.substr(pos, len)
       this.value = before + "[]()" + after
+      localStorage.setItem("text", this.value)
+    },
+    u() {
+      let textarea = this.$refs.textarea
+      const sentence = textarea.value
+      const len = sentence.length
+      let pos = textarea.selectionStart
+      const before = sentence.substr(0, pos)
+      const after = sentence.substr(pos, len)
+      this.value = before + "*" + after
       localStorage.setItem("text", this.value)
     }
   }
