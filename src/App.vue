@@ -1,19 +1,23 @@
 <template>
-  <nav class="navbar">
-    <div class="buttons">
-      <i class="fi fi-br-b" @click="b"></i>
-      <i class="fi fi-br-i" @click="i"></i>
-      <i class="fi fi-br-h" @click="h"></i>
-      <i class="fi fi-rr-picture" @click="g"></i>
+  <div ref="container">
+    <nav class="navbar">
+      <div class="buttons">
+        <i class="fi fi-br-b" @click="b"></i>
+        <i class="fi fi-br-i" @click="i"></i>
+        <i class="fi fi-br-h" @click="h"></i>
+        <i class="fi fi-rr-picture" @click="g"></i>
+        <i class="fi fi-br-expand" @click="toggleFullscreen" v-if="!fullscreen"></i>
+        <i class="fi fi-br-compress" @click="toggleFullscreen" v-if="fullscreen"></i>
+      </div>
+      <div class="toggle">
+        <i class="fi fi-rr-eye" v-if="!show" @click="toggle"></i>
+        <i class="fi fi-rr-money-check-edit" v-if="show" @click="toggle"></i>
+      </div>
+    </nav>
+    <div class="editor">
+      <textarea ref="textarea" dir="rtl" v-model="value" class="textarea" @input="update"></textarea>
+      <span dir="rtl" class="output" v-html="output" v-if="show"></span>
     </div>
-    <div class="toggle">
-      <i class="fi fi-rr-eye" v-if="!show" @click="toggle"></i>
-      <i class="fi fi-rr-edit" v-if="show" @click="toggle"></i>
-    </div>
-  </nav>
-  <div class="editor">
-    <textarea ref="textarea" dir="rtl" v-model="value" class="textarea" @input="update"></textarea>
-    <div dir="rtl" class="output" v-html="output" v-if="show"></div>
   </div>
 </template>
 
@@ -24,7 +28,8 @@ export default {
   data() {
     return {
       value: '',
-      show: true
+      show: true,
+      fullscreen: false
     }
   },
   mounted() {
@@ -46,6 +51,27 @@ export default {
     },
     toggle() {
       this.show = !this.show
+    },
+    toggleFullscreen() {
+      this.fullscreen = !this.fullscreen
+      let container = this.$refs.container
+      if (this.fullscreen) {
+        if (container.requestFullscreen) {
+          container.requestFullscreen();
+        } else if (container.webkitRequestFullscreen) {
+          container.webkitRequestFullscreen();
+        } else if (container.msRequestFullscreen) {
+          container.msRequestFullscreen();
+        }
+      } else {
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+        } else if (document.webkitExitFullscreen) {
+          document.webkitExitFullscreen();
+        } else if (document.msExitFullscreen) {
+          document.msExitFullscreen();
+        }
+      }
     },
     b() {
       let textarea = this.$refs.textarea
@@ -148,13 +174,14 @@ export default {
   }
   .output {
     width: 100%;
-    height: auto;
-    padding: 0.25em 1.5em 1em 1.5em;
-    padding-bottom: 20px !important;
+    height: 100vh;
+    padding: 4em 1.5em 1em 1.5em;
     position: absolute;
-    top: 60px;
+    top: 0;
     left: 0;
     background: var(--white);
+    overflow-x: hidden;
+    overflow-y: auto;
   }
   .output img {
     width: 100%;
