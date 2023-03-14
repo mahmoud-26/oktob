@@ -237,7 +237,7 @@
   .textarea {
     width: 100%;
     height: 100vh;
-    padding: 3.3em 1.1em 2em 1.1em !important;
+    padding: 3em 1.1em 2em 1.1em !important;
     font-size: 1.7em;
     border: none;
     outline: none;
@@ -249,7 +249,7 @@
     width: 100%;
     height: 100vh;
     font-size: 1.7em;
-    padding: 2.3em 1.1em 1em 1.1em;
+    padding: 2em 1.1em 1em 1.1em;
     position: absolute;
     top: 0;
     left: 0;
