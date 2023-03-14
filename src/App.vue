@@ -40,7 +40,7 @@
     },
     mounted() {
       if (localStorage.getItem("text") == null) {
-        localStorage.setItem("text", "# Hello")
+        localStorage.setItem("text", "السلام عليكم")
         this.value = localStorage.getItem("text")
       } else {
         this.value = localStorage.getItem("text")
