@@ -21,7 +21,7 @@
       </div>
     </nav>
     <div class="editor">
-      <textarea ref="textarea" dir="rtl" v-model="value" class="textarea" @input="update"></textarea>
+      <textarea ref="textarea" dir="rtl" v-model="value" class="textarea" @input="update" placeholder="قم بالكتابة هنا..."></textarea>
       <div dir="rtl" class="output" v-html="output" v-if="show"></div>
     </div>
   </div>
@@ -40,7 +40,6 @@
     },
     mounted() {
       if (localStorage.getItem("text") == null) {
-        localStorage.setItem("text", "السلام عليكم")
         this.value = localStorage.getItem("text")
       } else {
         this.value = localStorage.getItem("text")
