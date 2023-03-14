@@ -28,161 +28,165 @@
 </template>
 
 <script>
-import { marked } from 'marked'
+  import { marked } from 'marked'
 
-export default {
-  data() {
-    return {
-      value: '',
-      show: true,
-      fullscreen: false
-    }
-  },
-  mounted() {
-    if (localStorage.getItem("text") == null) {
-      localStorage.setItem("text", "# Hello")
-      this.value = localStorage.getItem("text")
-    } else {
-      this.value = localStorage.getItem("text")
-    }
-  },
-  computed: {
-    output() {
-      return marked(this.value)
-    }
-  },
-  methods: {
-    update() {
-      localStorage.setItem("text", this.value)
-    },
-    toggle() {
-      this.show = !this.show
-    },
-    /*
-    toggleFullscreen() {
-      this.fullscreen = !this.fullscreen
-      let container = this.$refs.container
-      if (this.fullscreen) {
-        if (container.requestFullscreen) {
-          container.requestFullscreen();
-        } else if (container.webkitRequestFullscreen) {
-          container.webkitRequestFullscreen();
-        } else if (container.msRequestFullscreen) {
-          container.msRequestFullscreen();
-        }
-      } else {
-        if (document.exitFullscreen) {
-          document.exitFullscreen();
-        } else if (document.webkitExitFullscreen) {
-          document.webkitExitFullscreen();
-        } else if (document.msExitFullscreen) {
-          document.msExitFullscreen();
-        }
+  export default {
+    data() {
+      return {
+        value: '',
+        show: true,
+        fullscreen: false
       }
     },
-    */
-    b() {
-      let textarea = this.$refs.textarea
-      const sentence = textarea.value
-      const len = sentence.length
-      let pos = textarea.selectionStart
-      const before = sentence.substr(0, pos)
-      const after = sentence.substr(pos, len)
-      this.value = before + "****" + after
-      localStorage.setItem("text", this.value)
+    mounted() {
+      if (localStorage.getItem("text") == null) {
+        localStorage.setItem("text", "# Hello")
+        this.value = localStorage.getItem("text")
+      } else {
+        this.value = localStorage.getItem("text")
+      }
     },
-    i() {
-      let textarea = this.$refs.textarea
-      const sentence = textarea.value
-      const len = sentence.length
-      let pos = textarea.selectionStart
-      const before = sentence.substr(0, pos)
-      const after = sentence.substr(pos, len)
-      this.value = before + "__" + after
-      localStorage.setItem("text", this.value)
+    computed: {
+      output() {
+        return marked(this.value)
+      }
     },
-    h() {
-      let textarea = this.$refs.textarea
-      const sentence = textarea.value
-      const len = sentence.length
-      let pos = textarea.selectionStart
-      const before = sentence.substr(0, pos)
-      const after = sentence.substr(pos, len)
-      this.value = before + "# " + after
-      localStorage.setItem("text", this.value)
-    },
-    g() {
-      let textarea = this.$refs.textarea
-      const sentence = textarea.value
-      const len = sentence.length
-      let pos = textarea.selectionStart
-      const before = sentence.substr(0, pos)
-      const after = sentence.substr(pos, len)
-      this.value = before + "![]()" + after
-      localStorage.setItem("text", this.value)
-    },
-    q() {
-      let textarea = this.$refs.textarea
-      const sentence = textarea.value
-      const len = sentence.length
-      let pos = textarea.selectionStart
-      const before = sentence.substr(0, pos)
-      const after = sentence.substr(pos, len)
-      this.value = before + ">" + after
-      localStorage.setItem("text", this.value)
-    },
-    c() {
-      let textarea = this.$refs.textarea
-      const sentence = textarea.value
-      const len = sentence.length
-      let pos = textarea.selectionStart
-      const before = sentence.substr(0, pos)
-      const after = sentence.substr(pos, len)
-      this.value = before + "``````" + after
-      localStorage.setItem("text", this.value)
-    },
-    l() {
-      let textarea = this.$refs.textarea
-      const sentence = textarea.value
-      const len = sentence.length
-      let pos = textarea.selectionStart
-      const before = sentence.substr(0, pos)
-      const after = sentence.substr(pos, len)
-      this.value = before + "[]()" + after
-      localStorage.setItem("text", this.value)
-    },
-    u() {
-      let textarea = this.$refs.textarea
-      const sentence = textarea.value
-      const len = sentence.length
-      let pos = textarea.selectionStart
-      const before = sentence.substr(0, pos)
-      const after = sentence.substr(pos, len)
-      this.value = before + "*" + after
-      localStorage.setItem("text", this.value)
+    methods: {
+      update() {
+        localStorage.setItem("text", this.value)
+      },
+      toggle() {
+        this.show = !this.show
+      },
+      /*
+      toggleFullscreen() {
+        this.fullscreen = !this.fullscreen
+        let container = this.$refs.container
+        if (this.fullscreen) {
+          if (container.requestFullscreen) {
+            container.requestFullscreen();
+          } else if (container.webkitRequestFullscreen) {
+            container.webkitRequestFullscreen();
+          } else if (container.msRequestFullscreen) {
+            container.msRequestFullscreen();
+          }
+        } else {
+          if (document.exitFullscreen) {
+            document.exitFullscreen();
+          } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+          } else if (document.msExitFullscreen) {
+            document.msExitFullscreen();
+          }
+        }
+      },
+      */
+      b() {
+        let textarea = this.$refs.textarea
+        const sentence = textarea.value
+        const len = sentence.length
+        let pos = textarea.selectionStart
+        const before = sentence.substr(0, pos)
+        const after = sentence.substr(pos, len)
+        this.value = before + "****" + after
+        localStorage.setItem("text", this.value)
+      },
+      i() {
+        let textarea = this.$refs.textarea
+        const sentence = textarea.value
+        const len = sentence.length
+        let pos = textarea.selectionStart
+        const before = sentence.substr(0, pos)
+        const after = sentence.substr(pos, len)
+        this.value = before + "__" + after
+        localStorage.setItem("text", this.value)
+      },
+      h() {
+        let textarea = this.$refs.textarea
+        const sentence = textarea.value
+        const len = sentence.length
+        let pos = textarea.selectionStart
+        const before = sentence.substr(0, pos)
+        const after = sentence.substr(pos, len)
+        this.value = before + "# " + after
+        localStorage.setItem("text", this.value)
+      },
+      g() {
+        let textarea = this.$refs.textarea
+        const sentence = textarea.value
+        const len = sentence.length
+        let pos = textarea.selectionStart
+        const before = sentence.substr(0, pos)
+        const after = sentence.substr(pos, len)
+        this.value = before + "![]()" + after
+        localStorage.setItem("text", this.value)
+      },
+      q() {
+        let textarea = this.$refs.textarea
+        const sentence = textarea.value
+        const len = sentence.length
+        let pos = textarea.selectionStart
+        const before = sentence.substr(0, pos)
+        const after = sentence.substr(pos, len)
+        this.value = before + ">" + after
+        localStorage.setItem("text", this.value)
+      },
+      c() {
+        let textarea = this.$refs.textarea
+        const sentence = textarea.value
+        const len = sentence.length
+        let pos = textarea.selectionStart
+        const before = sentence.substr(0, pos)
+        const after = sentence.substr(pos, len)
+        this.value = before + "``````" + after
+        localStorage.setItem("text", this.value)
+      },
+      l() {
+        let textarea = this.$refs.textarea
+        const sentence = textarea.value
+        const len = sentence.length
+        let pos = textarea.selectionStart
+        const before = sentence.substr(0, pos)
+        const after = sentence.substr(pos, len)
+        this.value = before + "[]()" + after
+        localStorage.setItem("text", this.value)
+      },
+      u() {
+        let textarea = this.$refs.textarea
+        const sentence = textarea.value
+        const len = sentence.length
+        let pos = textarea.selectionStart
+        const before = sentence.substr(0, pos)
+        const after = sentence.substr(pos, len)
+        this.value = before + "*" + after
+        localStorage.setItem("text", this.value)
+      }
     }
   }
-}
 </script>
 
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Lateef:wght@200;300;400;500;600;700;800&display=swap');
+
   :root {
     --blue: #0077B6;
     --black: rgb(31, 41, 55);
     --white: #FFFFFF;
     --yellow: rgb(253, 241, 207);
   }
+
   * {
     box-sizing: border-box;
     font-family: 'Lateef', serif;
   }
+
   body {
     padding: 0;
     margin: 0;
     width: 100%;
     height: 100vh;
   }
+
   .navbar {
     width: 100%;
     height: 50px;
@@ -194,6 +198,7 @@ export default {
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
   }
+
   .buttons {
     width: 80%;
     height: 50px;
@@ -208,6 +213,7 @@ export default {
     grid-template-rows: repeat(2, 1fr);
     */
   }
+
   .buttons i {
     font-size: 0.85em;
     color: var(--white);
@@ -215,9 +221,11 @@ export default {
     border-radius: 5px;
     transition: background 0.1s;
   }
+
   .buttons i:active {
     background: #023E8A;
   }
+
   .toggle i {
     font-size: 1.2em;
     color: var(--white);
@@ -225,6 +233,7 @@ export default {
     top: 16px;
     right: 30px;
   }
+
   .textarea {
     width: 100%;
     height: 100vh;
@@ -232,9 +241,10 @@ export default {
     font-size: 1.7em;
     border: none;
     outline: none;
-    line-height: 30px;
+    line-height: 35px;
     font-weight: 400;
   }
+
   .output {
     width: 100%;
     height: 100vh;
@@ -246,13 +256,15 @@ export default {
     background: var(--white);
     overflow-x: hidden;
     overflow-y: auto;
-    line-height: 30px;
+    line-height: 35px;
     font-weight: 400;
   }
+
   .output img {
     width: 100%;
     border-radius: 5px;
   }
+
   .output blockquote {
     padding: 0.01px 0.5em;
     margin: 0;
@@ -260,17 +272,25 @@ export default {
     background: var(--yellow);
     border-radius: 5px;
   }
+
   .output code {
     color: var(--white);
     background: var(--black);
     padding: 0.5em;
     border-radius: 5px;
   }
+
   .output a {
     text-decoration: none;
     color: var(--blue);
   }
-  .output h1, h2, h3, h4, h5, h6 {
+
+  .output h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-weight: 600;
   }
 </style>
