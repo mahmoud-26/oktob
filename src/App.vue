@@ -247,7 +247,7 @@ export default {
     overflow-x: hidden;
     overflow-y: auto;
     line-height: 30px;
-    font-weight: 200;
+    font-weight: 400;
   }
   .output img {
     width: 100%;
@@ -269,5 +269,8 @@ export default {
   .output a {
     text-decoration: none;
     color: var(--blue);
+  }
+  .output h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
   }
 </style>
