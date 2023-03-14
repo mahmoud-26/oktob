@@ -273,7 +273,7 @@
   .output code {
     color: var(--white);
     background: var(--black);
-    padding: 0.2em 0.5em;
+    padding: 0.1em 0.5em;
     border-radius: 5px;
   }
 
