@@ -237,11 +237,10 @@
   .textarea {
     width: 100%;
     height: 100vh;
-    padding: 3em 1.1em 2em 1.1em !important;
+    padding: 2.8em 1.1em 2em 1.1em !important;
     font-size: 1.7em;
     border: none;
     outline: none;
-    line-height: 35px;
     font-weight: 400;
   }
 
@@ -249,14 +248,13 @@
     width: 100%;
     height: 100vh;
     font-size: 1.7em;
-    padding: 2em 1.1em 1em 1.1em;
+    padding: 1.8em 1.1em 1em 1.1em;
     position: absolute;
     top: 0;
     left: 0;
     background: var(--white);
     overflow-x: hidden;
     overflow-y: auto;
-    line-height: 35px;
     font-weight: 400;
   }
 
