@@ -241,6 +241,7 @@
     border: none;
     outline: none;
     font-weight: 400;
+    color: var(--black);
   }
 
   .output {
@@ -255,6 +256,7 @@
     overflow-x: hidden;
     overflow-y: auto;
     font-weight: 400;
+    color: var(--black);
   }
 
   .output img {
@@ -263,10 +265,10 @@
   }
 
   .output blockquote {
-    padding: 0.01px 0.5em;
+    padding: 0 0.5em;
     margin: 0;
-    border-right: 3px solid var(--blue);
-    background: var(--yellow);
+    border-right: 3px solid var(--black);
+    background: whitesmoke;
     border-radius: 5px;
   }
 
@@ -285,9 +287,25 @@
   .output h1,
   h2,
   h3,
-  h4,
-  h5,
+  h4 {
+    font-weight: 800;
+  }
+  
+  .output h5,
   h6 {
     font-weight: 600;
   }
-</style>
+
+  .output table {
+    margin: 1em 0;
+    width: 100%;
+    border: 1px solid var(--black);
+    border-radius: 4px;
+    text-align: center;
+  }
+
+  .output table td, th {
+    border: 0.5px solid var(--black);
+    border-radius: 2px;
+  }
+  </style>
