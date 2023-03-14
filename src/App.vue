@@ -233,7 +233,6 @@ export default {
     border: none;
     outline: none;
     line-height: 30px;
-    font-weight: 400;
   }
   .output {
     width: 100%;
@@ -247,7 +246,6 @@ export default {
     overflow-x: hidden;
     overflow-y: auto;
     line-height: 30px;
-    font-weight: 400;
   }
   .output img {
     width: 100%;
