@@ -5,9 +5,9 @@
         <i class="fi fi-br-b" @click="b"></i>
         <i class="fi fi-br-i" @click="i"></i>
         <i class="fi fi-br-h" @click="h"></i>
-        <i class="fi fi-rr-picture" @click="g"></i>
-        <i class="fi fi-rr-quote-right" @click="q"></i>
-        <i class="fi fi-rr-code-simple" @click="c"></i>
+        <i class="fi fi-br-picture" @click="g"></i>
+        <i class="fi fi-br-quote-right" @click="q"></i>
+        <i class="fi fi-br-code-simple" @click="c"></i>
         <i class="fi fi-br-link-alt" @click="l"></i>
         <i class="fi fi-br-list" @click="u"></i>
         <!--
@@ -16,8 +16,8 @@
         -->
       </div>
       <div class="toggle">
-        <i class="fi fi-rr-eye" v-if="!show" @click="toggle"></i>
-        <i class="fi fi-rr-calendar-lines-pen" v-if="show" @click="toggle"></i>
+        <i class="fi fi-br-eye" v-if="!show" @click="toggle"></i>
+        <i class="fi fi-br-pen-clip" v-if="show" @click="toggle"></i>
       </div>
     </nav>
     <div class="editor">
@@ -166,7 +166,7 @@ export default {
 </script>
 
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Lateef:wght@200;300;400;500;600;700;800&display=swap');
   :root {
     --blue: #0077B6;
     --black: rgb(31, 41, 55);
@@ -175,7 +175,7 @@ export default {
   }
   * {
     box-sizing: border-box;
-    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-family: 'Lateef', serif;
   }
   body {
     padding: 0;
@@ -185,9 +185,8 @@ export default {
   }
   .navbar {
     width: 100%;
-    height: 90px;
-    background: white;
-    background: var(--blue);
+    height: 50px;
+    background: var(--black);
     position: fixed;
     top: 0;
     left: 0;
@@ -197,19 +196,22 @@ export default {
   }
   .buttons {
     width: 80%;
-    height: 90px;
-    padding: 5px 15px 15px 15px;
-    text-align: center;
+    height: 50px;
+    padding: 9px;
+    display: flex;
+    justify-content: space-around;
+    /*
     display: grid;
     row-gap: 5px;
     column-gap: 35px;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
+    */
   }
   .buttons i {
     font-size: 0.85em;
     color: var(--white);
-    padding: 10px 0 6px 0;
+    padding: 10px;
     border-radius: 5px;
     transition: background 0.1s;
   }
@@ -220,27 +222,31 @@ export default {
     font-size: 1.2em;
     color: var(--white);
     position: absolute;
-    top: 30px;
+    top: 16px;
     right: 30px;
   }
   .textarea {
     width: 100%;
     height: 100vh;
-    padding: 7em 1.5em 2em 1.5em !important;
-    font-size: 1em;
+    padding: 3.3em 1.3em 2em 1.3em !important;
+    font-size: 1.7em;
     border: none;
     outline: none;
+    line-height: 30px;
+    font-weight: ;
   }
   .output {
     width: 100%;
     height: 100vh;
-    padding: 6em 1.5em 1em 1.5em;
+    font-size: 1.7em;
+    padding: 2.3em 1.3em 1em 1.3em;
     position: absolute;
     top: 0;
     left: 0;
     background: var(--white);
     overflow-x: hidden;
     overflow-y: auto;
+    line-height: 30px;
   }
   .output img {
     width: 100%;
