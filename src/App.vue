@@ -247,7 +247,7 @@ export default {
     overflow-x: hidden;
     overflow-y: auto;
     line-height: 30px;
-    font-weight: 400;
+    font-weight: 200;
   }
   .output img {
     width: 100%;
