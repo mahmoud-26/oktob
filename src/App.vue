@@ -281,7 +281,7 @@
 
   .output a {
     text-decoration: none;
-    color: var(--blue);
+    color: var(--black);
   }
 
   .output h1,
