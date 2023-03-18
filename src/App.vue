@@ -305,6 +305,7 @@
   }
 
   .output table td, th {
+    padding: 5px;
     border: 0.5px solid var(--black);
     border-radius: 2px;
   }
