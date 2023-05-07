@@ -181,7 +181,6 @@
 
   * {
     box-sizing: border-box;
-    font-family: 'lateef', serif;
   }
 
   body {
@@ -189,6 +188,7 @@
     margin: 0;
     width: 100%;
     height: 100vh;
+    font-family: 'lateef', serif;
   }
 
   .navbar {
