@@ -282,7 +282,7 @@
     border-radius: 5px;
   }
 
-  .output blockquote {
+  .output blockquote p {
     font-family: 'hafs' !important;
     padding: 0 0.5em;
     margin: 0;
