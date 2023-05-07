@@ -279,7 +279,7 @@
 
   .output code {
     font-family: 'hafs' !important;
-    max-width: 100%;
+    max-width: 100px;
     height: auto;
     color: var(--white);
     background: var(--black);
