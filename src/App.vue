@@ -282,15 +282,17 @@
     border-radius: 5px;
   }
 
-  .output blockquote p {
+  .output blockquote {
     font-family: 'hafs' !important;
-    padding: 0 ;
+    padding: 0 0.05em;
     margin: 0;
-    /*
     border-right: 3px solid var(--black);
     background: whitesmoke;
     border-radius: 5px;
-    */
+  }
+  
+  .output blockquote p {
+    font-family: 'hafs' !important;
   }
 
   .output code {
