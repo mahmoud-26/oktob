@@ -283,12 +283,13 @@
   }
 
   .output blockquote {
-    font-family: 'hafs' !important;
-    padding: 0 0.05em;
+    padding: 0;
     margin: 0;
+    /*
     border-right: 3px solid var(--black);
     background: whitesmoke;
     border-radius: 5px;
+    */
   }
   
   .output blockquote p {
