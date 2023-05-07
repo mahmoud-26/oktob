@@ -168,8 +168,8 @@
   @import url('https://fonts.googleapis.com/css2?family=Lateef:wght@200;300;400;500;600;700;800&display=swap');
   
   @font-face {
-    font-family: 'hafs20';
-    src: url('fonts/hafs20.ttf');
+    font-family: 'hafs';
+    src: url('fonts/hafs.ttf');
   }
   
   :root {
@@ -181,7 +181,7 @@
 
   * {
     box-sizing: border-box;
-    font-family: 'Lateef', serif;
+    font-family: 'hafs', serif;
   }
 
   body {
@@ -275,7 +275,7 @@
     border-right: 3px solid var(--black);
     background: whitesmoke;
     border-radius: 5px;
-    font-family: 'hafs20' !important;
+    font-family: 'hafs' !important;
   }
 
   .output code {
