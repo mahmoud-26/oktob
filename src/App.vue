@@ -298,6 +298,7 @@
   h3,
   h4 {
     font-weight: 800;
+    font-family: 'hafs' !important;
   }
   
   .output h5,
