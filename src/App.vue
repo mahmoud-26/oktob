@@ -166,12 +166,12 @@
 
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Lateef:wght@200;300;400;500;600;700;800&display=swap');
-  
+
   @font-face {
     font-family: 'hafs';
     src: url('fonts/hafs.ttf');
   }
-  
+
   :root {
     --blue: #0077B6;
     --black: rgb(31, 41, 55);
@@ -181,7 +181,6 @@
 
   * {
     box-sizing: border-box;
-    font-family: 'hafs', serif;
   }
 
   body {
@@ -238,6 +237,20 @@
     right: 30px;
   }
 
+  .textarea,
+  .output code,
+  .output a,
+  .output code,
+  .output h1,
+  .output h2,
+  .output h3,
+  .output h4,
+  .output h5,
+  .output h6,
+  .output table {
+    font-family: 'lateef' !important;
+  }
+
   .textarea {
     width: 100%;
     height: 100vh;
@@ -270,6 +283,7 @@
   }
 
   .output blockquote {
+    font-family: 'hafs' !important;
     padding: 0 0.5em;
     margin: 0;
     border-right: 3px solid var(--black);
@@ -288,16 +302,16 @@
     text-decoration: none;
     color: var(--blue);
   }
-  
+
   .output h1,
-  h2,
-  h3,
-  h4 {
+  .output h2,
+  .output h3,
+  .output h4 {
     font-weight: 800;
   }
-  
+
   .output h5,
-  h6 {
+  .output h6 {
     font-weight: 600;
   }
 
@@ -309,9 +323,10 @@
     text-align: center;
   }
 
-  .output table td, th {
+  .output table td,
+  .output table th {
     padding: 5px;
     border: 0.5px solid var(--black);
     border-radius: 2px;
   }
-  </style>
+</style>
