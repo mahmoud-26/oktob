@@ -270,6 +270,7 @@
   }
 
   .output blockquote {
+    font-family: 'hafs' !important;
     padding: 0 0.5em;
     margin: 0;
     border-right: 3px solid var(--black);
@@ -278,7 +279,6 @@
   }
 
   .output code {
-    font-family: 'hafs' !important;
     color: var(--white);
     background: var(--black);
     padding: 0.1em 0.5em;
