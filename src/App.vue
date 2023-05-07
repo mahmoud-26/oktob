@@ -278,6 +278,8 @@
   }
 
   .output code {
+    font-family: 'hafs' !important;
+    max-height: 100%;
     color: var(--white);
     background: var(--black);
     padding: 0.1em 0.5em;
@@ -289,16 +291,11 @@
     color: var(--blue);
   }
   
-  .output i {
-    font-family: 'hafs' !important;
-  }
-
   .output h1,
   h2,
   h3,
   h4 {
     font-weight: 800;
-    font-family: 'hafs' !important;
   }
   
   .output h5,
