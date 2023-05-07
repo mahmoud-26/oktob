@@ -181,6 +181,7 @@
 
   * {
     box-sizing: border-box;
+    font-family: 'lateef', serif;
   }
 
   body {
@@ -188,7 +189,6 @@
     margin: 0;
     width: 100%;
     height: 100vh;
-    font-family: 'lateef', serif;
   }
 
   .navbar {
@@ -275,10 +275,10 @@
     border-right: 3px solid var(--black);
     background: whitesmoke;
     border-radius: 5px;
-    font-family: 'hafs' !important;
   }
 
   .output code {
+    font-family: 'hafs' !important;
     color: var(--white);
     background: var(--black);
     padding: 0.1em 0.5em;
