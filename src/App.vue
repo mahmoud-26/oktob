@@ -181,7 +181,7 @@
 
   * {
     box-sizing: border-box;
-    font-family: 'hafs', serif;
+    font-family: 'lateef', serif;
   }
 
   body {
