@@ -181,6 +181,7 @@
 
   * {
     box-sizing: border-box;
+    font-family: 'hafs';
   }
 
   body {
@@ -248,7 +249,7 @@
   .output h5,
   .output h6,
   .output table {
-    font-family: 'lateef' !important;
+    font-family: 'hafs' !important;
   }
 
   .textarea {
