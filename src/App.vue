@@ -270,14 +270,11 @@
   }
 
   .output blockquote {
-    font-family: 'hafs' !important;
-    /*
     padding: 0 0.5em;
     margin: 0;
     border-right: 3px solid var(--black);
     background: whitesmoke;
     border-radius: 5px;
-    */
   }
 
   .output code {
@@ -290,6 +287,10 @@
   .output a {
     text-decoration: none;
     color: var(--blue);
+  }
+  
+  .output i {
+    font-family: 'hafs' !important;
   }
 
   .output h1,
