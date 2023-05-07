@@ -166,7 +166,12 @@
 
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Lateef:wght@200;300;400;500;600;700;800&display=swap');
-
+  
+  @font-face {
+    font-family: 'hafs20';
+    src: url('fonts/hafs20.ttf');
+  }
+  
   :root {
     --blue: #0077B6;
     --black: rgb(31, 41, 55);
@@ -270,6 +275,7 @@
     border-right: 3px solid var(--black);
     background: whitesmoke;
     border-radius: 5px;
+    font-family: 'hafs20' !important;
   }
 
   .output code {
