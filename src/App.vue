@@ -239,8 +239,8 @@
 
   .textarea,
   .output code,
+  .output p,
   .output a,
-  .output code,
   .output h1,
   .output h2,
   .output h3,
