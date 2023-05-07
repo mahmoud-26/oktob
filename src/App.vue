@@ -277,9 +277,9 @@
     border-radius: 5px;
   }
 
-  .output code {
+  code {
     font-family: 'hafs' !important;
-    max-width: 100px;
+    width: 100px;
     height: auto;
     color: var(--white);
     background: var(--black);
