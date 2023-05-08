@@ -2,6 +2,7 @@
   <div ref="container">
     <nav class="navbar">
       <div class="buttons">
+        <i class="fi fi-br-download" @click="d"></i>
         <i class="fi fi-br-b" @click="b"></i>
         <i class="fi fi-br-i" @click="i"></i>
         <i class="fi fi-br-h" @click="h"></i>
@@ -159,6 +160,14 @@
         const after = sentence.substr(pos, len)
         this.value = before + "*" + after
         localStorage.setItem("text", this.value)
+      },
+      d() {
+        const element = document.createElement("a");
+        const file = new Blob([this.value], { type: "text/markdown" });
+        element.href = URL.createObjectURL(file);
+        element.download = "text.md";
+        document.body.appendChild(element);
+        element.click();
       }
     }
   }
@@ -193,7 +202,7 @@
 
   .navbar {
     width: 100%;
-    height: 50px;
+    height: 55px;
     background: var(--black);
     position: fixed;
     top: 0;
@@ -205,8 +214,8 @@
 
   .buttons {
     width: 80%;
-    height: 50px;
-    padding: 9px;
+    height: 55px;
+    padding: 9px 9px 9px 25px;
     display: flex;
     justify-content: space-around;
     /*
@@ -219,15 +228,15 @@
   }
 
   .buttons i {
-    font-size: 0.85em;
+    font-size: 0.8em;
     color: var(--white);
     padding: 10px;
     border-radius: 5px;
-    transition: background 0.1s;
+    transition: background 0.2s;
   }
 
   .buttons i:active {
-    background: #023E8A;
+    background: #10151c;
   }
 
   .toggle i {
@@ -235,21 +244,7 @@
     color: var(--white);
     position: absolute;
     top: 16px;
-    right: 30px;
-  }
-
-  .textarea,
-  .output code,
-  .output p,
-  .output a,
-  .output h1,
-  .output h2,
-  .output h3,
-  .output h4,
-  .output h5,
-  .output h6,
-  .output table {
-    font-family: 'hafs' !important;
+    right: 25px;
   }
 
   .textarea {
@@ -292,7 +287,6 @@
   }
   
   .output blockquote p {
-    font-family: 'hafs' !important;
     margin: 10px;
   }
 
