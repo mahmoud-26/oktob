@@ -286,15 +286,14 @@
   .output blockquote {
     padding: 0;
     margin: 0;
-    /*
     border-right: 3px solid var(--black);
     background: whitesmoke;
     border-radius: 5px;
-    */
   }
   
   .output blockquote p {
     font-family: 'hafs' !important;
+    margin: 10px;
   }
 
   .output code {
