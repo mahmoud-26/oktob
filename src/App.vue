@@ -174,8 +174,10 @@
 </script>
 
 <style>
+  /*
   @import url('https://fonts.googleapis.com/css2?family=Lateef:wght@200;300;400;500;600;700;800&display=swap');
-
+  */
+  
   @font-face {
     font-family: 'hafs';
     src: url('fonts/hafs.ttf');
@@ -285,7 +287,7 @@
     background: whitesmoke;
     border-radius: 5px;
   }
-  
+
   .output blockquote p {
     margin: 10px;
   }
