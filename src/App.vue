@@ -169,7 +169,7 @@
 
   @font-face {
     font-family: 'hafs';
-    src: url('fonts/hafs.ttf');
+    src: url('fonts/hafs13.ttf');
   }
 
   :root {
