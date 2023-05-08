@@ -11,10 +11,10 @@
         <i class="fi fi-br-code-simple" @click="c"></i>
         <i class="fi fi-br-link-alt" @click="l"></i>
         <i class="fi fi-br-list" @click="u"></i>
-        <!--
+        <!---->
         <i class="fi fi-br-expand" @click="toggleFullscreen" v-if="!fullscreen"></i>
         <i class="fi fi-br-compress" @click="toggleFullscreen" v-if="fullscreen"></i>
-        -->
+        <!---->
       </div>
       <div class="toggle">
         <i class="fi fi-br-eye" v-if="!show" @click="toggle"></i>
@@ -58,7 +58,7 @@
       toggle() {
         this.show = !this.show
       },
-      /*
+      /**/
       toggleFullscreen() {
         this.fullscreen = !this.fullscreen
         let container = this.$refs.container
@@ -80,7 +80,7 @@
           }
         }
       },
-      */
+      /**/
       b() {
         let textarea = this.$refs.textarea
         const sentence = textarea.value
@@ -215,7 +215,7 @@
   .buttons {
     width: 80%;
     height: 55px;
-    padding: 9px 9px 9px 25px;
+    padding: 9px 9px 9px 45px;
     display: flex;
     justify-content: space-around;
     /*
@@ -230,7 +230,7 @@
   .buttons i {
     font-size: 0.8em;
     color: var(--white);
-    padding: 10px;
+    padding: 9px;
     border-radius: 5px;
     transition: background 0.2s;
   }
@@ -243,8 +243,8 @@
     font-size: 1.2em;
     color: var(--white);
     position: absolute;
-    top: 16px;
-    right: 25px;
+    top: 15px;
+    right: 18px;
   }
 
   .textarea {
