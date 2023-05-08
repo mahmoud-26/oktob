@@ -34,7 +34,7 @@
   export default {
     data() {
       return {
-        value: '',
+        value: 'hello',
         show: true,
         fullscreen: false
       }
