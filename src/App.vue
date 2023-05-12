@@ -309,7 +309,8 @@
   .output h3,
   .output h4 {
     font-weight: 800;
-    margin: 1em 0;
+    margin: 0;
+    padding: 0;
   }
 
   .output h5,
