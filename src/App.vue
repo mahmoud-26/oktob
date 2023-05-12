@@ -192,7 +192,7 @@
 
   * {
     box-sizing: border-box;
-    font-family: 'Hafs';
+    font-family: 'Naskh';
   }
 
   body {
