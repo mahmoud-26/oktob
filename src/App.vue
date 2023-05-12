@@ -182,6 +182,11 @@
     font-family: 'Naskh';
     src: url('fonts/Naskh.ttf');
   }
+  
+  @font-face {
+    font-family: 'NaskhB';
+    src: url('fonts/NaskhB.ttf');
+  }
 
   :root {
     --blue: #0077B6;
@@ -259,7 +264,11 @@
     font-weight: 400;
     color: var(--black);
   }
-
+  
+  strong {
+    font-family: "NaskhB" !important;
+  }
+  
   .output {
     width: 100%;
     height: 100vh;
@@ -311,6 +320,7 @@
   .output h4,
   .output h5,
   .output h6 {
+    font-family: "NaskhB" !important;
     font-weight: 800;
     margin: 0.5em 0 0.3em 0;
   }
