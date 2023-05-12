@@ -34,7 +34,7 @@
   export default {
     data() {
       return {
-        value: 'hello',
+        value: '',
         show: true,
         fullscreen: false
       }
@@ -179,8 +179,8 @@
   */
   
   @font-face {
-    font-family: 'hafs';
-    src: url('fonts/hafs.ttf');
+    font-family: 'Naskh';
+    src: url('fonts/Naskh.ttf');
   }
 
   :root {
@@ -192,7 +192,7 @@
 
   * {
     box-sizing: border-box;
-    font-family: 'hafs';
+    font-family: 'Hafs';
   }
 
   body {
@@ -253,7 +253,7 @@
     width: 100%;
     height: 100vh;
     padding: 2.8em 1.1em 2em 1.1em !important;
-    font-size: 1.40em;
+    font-size: 1.4em;
     border: none;
     outline: none;
     font-weight: 400;
@@ -301,24 +301,24 @@
 
   .output a {
     text-decoration: none;
-    color: var(--blue);
+    color: var(--black);
+    text-decoration: underline;
   }
 
   .output h1,
   .output h2,
   .output h3,
-  .output h4 {
-    font-weight: 800;
-    margin: 0.25em 0;
-  }
-
+  .output h4,
   .output h5,
   .output h6 {
-    font-weight: 600;
+    font-weight: 800;
+    margin: 0.5em 0 0.3em 0;
   }
   
   .output p {
-    margin: 0.5em;
+    margin: 0;
+    padding: 0;
+    font-size: 0.9em;
   }
 
   .output table {
