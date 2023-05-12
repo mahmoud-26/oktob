@@ -309,13 +309,16 @@
   .output h3,
   .output h4 {
     font-weight: 800;
-    margin: 0;
-    padding: 0;
+    margin: 0.25em 0;
   }
 
   .output h5,
   .output h6 {
     font-weight: 600;
+  }
+  
+  .output p {
+    margin: 0.5em;
   }
 
   .output table {
