@@ -282,7 +282,7 @@
 
   .output blockquote {
     padding: 0;
-    margin: 5px 0;
+    margin: 0;
     border-right: 3px solid var(--black);
     background: whitesmoke;
     border-radius: 5px;
