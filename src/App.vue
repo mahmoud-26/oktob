@@ -309,6 +309,7 @@
   }
 
   .output a {
+    font-family: "NaskhB" !important;
     text-decoration: none;
     color: var(--black);
     text-decoration: underline;
@@ -321,7 +322,6 @@
   .output h5,
   .output h6 {
     font-family: "NaskhB" !important;
-    font-weight: 600;
     margin: 0.5em 0 0.3em 0;
   }
   
