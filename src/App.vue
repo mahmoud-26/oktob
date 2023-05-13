@@ -326,7 +326,8 @@
     text-decoration: underline;
   }
   
-  .output p {
+  .output p,
+  .output li {
     margin: 0;
     padding: 0;
     font-size: 0.9em;
