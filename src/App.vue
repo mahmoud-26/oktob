@@ -208,6 +208,7 @@
   }
 
   .navbar {
+    font-size: 13px;
     width: 100%;
     height: 55px;
     background: var(--black);
@@ -222,7 +223,7 @@
   .buttons {
     width: 80%;
     height: 55px;
-    padding: 9px 9px 9px 45px;
+    padding: 12px 9px 9px 45px;
     display: flex;
     justify-content: space-around;
     /*
@@ -237,7 +238,7 @@
   .buttons i {
     font-size: 0.8em;
     color: var(--white);
-    padding: 9px;
+    padding: 10px 8px;
     border-radius: 5px;
     transition: background 0.2s;
   }
@@ -250,10 +251,10 @@
     font-size: 1.2em;
     color: var(--white);
     position: absolute;
-    top: 15px;
-    right: 18px;
+    top: 19px;
+    right: 15px;
   }
-
+  
   .textarea {
     width: 100%;
     height: 100vh;
