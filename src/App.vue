@@ -324,7 +324,6 @@
   .output h6 {
     font-family: "NaskhB" !important;
     margin: 0.5em 0 0.3em 0;
-    text-decoration: underline;
   }
   
   .output p,
