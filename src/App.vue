@@ -274,7 +274,7 @@
     width: 100%;
     height: 100vh;
     font-size: 1.7em;
-    padding: 2.2em 1.1em 1em 1.1em;
+    padding: 2.2em 0.8em 1em 0.8em;
     position: absolute;
     top: 0;
     left: 0;
