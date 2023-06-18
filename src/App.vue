@@ -259,7 +259,7 @@
     width: 100%;
     height: 100vh;
     padding: 2.8em 1.1em 2em 1.1em !important;
-    font-size: 1.4em;
+    font-size: 1.1em;
     border: none;
     outline: none;
     font-weight: 400;
