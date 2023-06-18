@@ -11,10 +11,10 @@
         <i class="fi fi-br-code-simple" @click="c"></i>
         <i class="fi fi-br-link-alt" @click="l"></i>
         <i class="fi fi-br-list" @click="u"></i>
-        <!---->
+        <!--
         <i class="fi fi-br-expand" @click="toggleFullscreen" v-if="!fullscreen"></i>
         <i class="fi fi-br-compress" @click="toggleFullscreen" v-if="fullscreen"></i>
-        <!---->
+        -->
       </div>
       <div class="toggle">
         <i class="fi fi-br-eye" v-if="!show" @click="toggle"></i>
@@ -238,7 +238,7 @@
   .buttons i {
     font-size: 0.8em;
     color: var(--white);
-    padding: 10px 8px;
+    padding: 10px 7px;
     border-radius: 5px;
     transition: background 0.2s;
   }
