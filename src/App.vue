@@ -334,7 +334,7 @@
   }
 
   .output table {
-    font-size: 12px;
+    font-size: 14px;
     margin: 1em 0;
     width: 100%;
     border: 1px solid var(--black);
